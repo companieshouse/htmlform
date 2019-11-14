@@ -1,5 +1,8 @@
 TESTS ?= ./...
 
+.EXPORT_ALL_VARIABLES:
+GO111MODULE = on
+
 .PHONY: all
 all: fmt test
 
