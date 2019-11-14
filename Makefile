@@ -1,4 +1,4 @@
-tests := ./...
+TESTS ?= ./...
 
 .PHONY: all
 all: fmt test
@@ -7,17 +7,13 @@ all: fmt test
 fmt:
 	  go fmt ./...
 
-.PHONY: deps
-deps:
-	  go get ./...
-
-.PHONY: test-deps
-test-deps: deps
-	  go get -t ./...
+.PHONY: build
+build:
+	  go build ./...
 
 .PHONY: test
 test: test-unit
 
 .PHONY: test-unit
-test-unit: test-deps
-	  @set -a; go test $(tests) -run 'Unit'
+test-unit:
+	  go test $(TESTS) -run 'Unit'

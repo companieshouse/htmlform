@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	. "github.com/smartystreets/GoConvey/convey"
+	. "github.com/smartystreets/goconvey/convey"
 )
 
 func TestMap(t *testing.T) {
