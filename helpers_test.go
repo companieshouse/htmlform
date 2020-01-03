@@ -7,7 +7,7 @@ import (
 	. "github.com/smartystreets/goconvey/convey"
 )
 
-func TestMap(t *testing.T) {
+func TestUnitMap(t *testing.T) {
 	Convey("Map should return a map", t, func() {
 		m, err := Map("a", 1)
 		So(err, ShouldBeNil)
@@ -45,7 +45,7 @@ func TestMap(t *testing.T) {
 	})
 }
 
-func TestArr(t *testing.T) {
+func TestUnitArr(t *testing.T) {
 	Convey("Arr should return a slice", t, func() {
 		a := Arr("a", "b", "c")
 		So(a, ShouldNotBeNil)
@@ -56,7 +56,7 @@ func TestArr(t *testing.T) {
 	})
 }
 
-func TestExtend(t *testing.T) {
+func TestUnitExtend(t *testing.T) {
 	Convey("Extend should extend a map", t, func() {
 		m0 := map[string]interface{}{"a": 1}
 		So(m0["b"], ShouldBeNil)
@@ -79,7 +79,7 @@ func TestExtend(t *testing.T) {
 	})
 }
 
-func TestFirstNotNil(t *testing.T) {
+func TestUnitFirstNotNil(t *testing.T) {
 	Convey("FirstNotNil should return the first non-nil parameter", t, func() {
 		a := FirstNotNil(1, 2, 3)
 		So(a, ShouldEqual, 1)
