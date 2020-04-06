@@ -4,7 +4,7 @@ TESTS ?= ./...
 GO111MODULE = on
 
 .PHONY: all
-all: fmt test
+all: clean fmt test
 
 .PHONY: fmt
 fmt:
@@ -20,3 +20,7 @@ test: test-unit
 .PHONY: test-unit
 test-unit:
 	  go test $(TESTS) -run 'Unit' -coverprofile=coverage.out
+
+.PHONY: clean
+clean:
+	go mod tidy
