@@ -97,4 +97,3 @@ From a template:
 Copyright ©‎ 2015, Ian Kent (http://iankent.uk).
 
 Released under MIT license, see [LICENSE](LICENSE.md) for details.
-
