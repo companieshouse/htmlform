@@ -1,5 +1,11 @@
 module github.com/companieshouse/htmlform
 
-go 1.12
+go 1.26.9
 
-require github.com/smartystreets/goconvey v0.0.0-20190731233626-505e41936337
+require github.com/smartystreets/goconvey v1.8.1
+
+require (
+	github.com/gopherjs/gopherjs v1.17.2 // indirect
+	github.com/jtolds/gls v4.20.0+incompatible // indirect
+	github.com/smarty/assertions v1.15.0 // indirect
+)
